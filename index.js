@@ -18,7 +18,10 @@ app.listen(port);
 app.set("view engine", "handlebars");
 
 //configuración del motor
-app.engine("handlebars", exphbs());
+app.engine("handlebars", exphbs({
+    layoutsDir:__dirname+"views/layouts",
+    layoutsDir:__dirname+"views/parciales",
+}));
 
 //indica el lugar donde coge los "parciales"
 app.get("/", function(req, res){
