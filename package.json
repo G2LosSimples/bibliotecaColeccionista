@@ -1,0 +1,23 @@
+{
+  "name": "bibliotecacoleccionista",
+  "version": "1.0.0",
+  "description": "Como coleccionista quiero saber cuantos libros como los de mi biblioteca hay, su estado, precio y dueño, para conocer el valor de mi colección.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/G2LosSimples/bibliotecaColeccionista.git"
+  },
+  "author": "Los Simples",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/G2LosSimples/bibliotecaColeccionista/issues"
+  },
+  "homepage": "https://github.com/G2LosSimples/bibliotecaColeccionista#readme",
+  "dependencies": {
+    "express": "4.17.1",
+    "express-handlebars": "^5.2.0"
+  }
+}
