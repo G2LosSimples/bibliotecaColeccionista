@@ -15,14 +15,48 @@ app.listen(port);
 
 
 //elige el motor de renderizado
-app.set("view engine", "handlebars");
+app.set("view engine", "hbs");
 
 //configuración del motor
-app.engine("handlebars", exphbs());
+app.engine("hbs", exphbs({
+    layoutsDir:__dirname+"/views/layouts",
+    partialsDir:__dirname+"/views/parciales",
+    extname:"hbs"
+}));
+
+
+fakeApi = () => {
+    return [
+        {
+            titulo: "El Quijote",
+            fecha: 2077
+        },
+
+        {
+            titulo: "Harry Potter y la Piedra Filosofal",
+            fecha: 1999
+        },
+
+        {
+            titulo: "Los Pilares de la Tierra",
+            fecha: 852
+        }
+    ];
+};
+
 
 //indica el lugar donde coge los "parciales"
 app.get("/", function(req, res){
-    res.render("index");
+    res.render("index", {layout:"main", listaLibros: fakeApi(),listExists: true});
 });
 
 app.use(express.static("public"));
+
+
+
+
+
+
+
+
+
