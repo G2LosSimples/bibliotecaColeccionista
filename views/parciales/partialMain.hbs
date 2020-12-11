@@ -1,11 +1,30 @@
 <main>
 
-<section>
+    <section>
 
-<p>
-    ESTO ES EL MAIN
-</p>
+        <p>
+            ESTO ES EL MAIN
+        </p>
 
-</section>
+    </section>
+
+    <section>
+        
+        {{#if listExists}}
+
+        <ul>
+            {{#each listaLibros}}
+
+            <li>TITULO: {{this.titulo}} FECHA: {{this.fecha}}</li>
+
+            {{/each}}
+
+
+        </ul>
+
+
+
+        {{/if}}
+    </section>
 
 </main>
