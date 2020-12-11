@@ -8,7 +8,24 @@
 </head>
 <body>
     
-    {{{body}}}
+{{>partialHeader}}
+{{>partialMain}}
+
+{{#if listExists}}
+
+    <ul>
+        {{#each listaLibros}}
+
+            <li>TITULO: {{this.titulo}} FECHA: {{this.fecha}}</li>
+        
+        {{/each}}
+
+
+    </ul>
+
+
+
+{{/if}}
     
 
 </body>
