@@ -1,6 +1,7 @@
 <header>
-    {{> atoms/button}}
-    <button id="init">Inicio</button>
+    {{> 00-atoms/button nombreBoton="Buscar"}}
+    
+    {{!-- <button id="init">Inicio</button> --}}
 
     <form id="search" action="" method="get">
     <input type="text" placeholder="buscar">
@@ -10,6 +11,7 @@
         BIBLIOTECA
     </h1>
     
-    <button>Nuevo</button>
+    {{> 00-atoms/button nombreBoton="Nuevo"}}
+    {{!-- <button>Nuevo</button> --}}
 
 </header>
