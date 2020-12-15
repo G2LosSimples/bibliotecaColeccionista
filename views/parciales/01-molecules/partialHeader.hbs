@@ -1,17 +1,15 @@
 <header>
-    {{> 00-atoms/button nombreBoton="Buscar"}}
-    
-    {{!-- <button id="init">Inicio</button> --}}
+    <section class="busqueda">
+        {{> 00-atoms/button nombreBoton="Buscar"}}
 
-    <form id="search" action="" method="get">
-    <input type="text" placeholder="buscar">
-    <button type="submit" id="btn-busqueda">F</button>
-    </form>
-    <h1>
-        BIBLIOTECA
-    </h1>
-    
+        <form id="search" action="" method="get">
+            {{> 00-atoms/barraBusqueda}}
+        </form>
+    </section>
+
+
+
     {{> 00-atoms/button nombreBoton="Nuevo"}}
-    {{!-- <button>Nuevo</button> --}}
+
 
 </header>

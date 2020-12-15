@@ -1,37 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+:root{
+    --coloFondo : #16A596;
+}
+ 
+
+
 *{
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: Roboto;
+    font-size: 20px;
 }
 
 header, footer{
-    background-color: #16A596;
-    width: 100%;
-    height: 50px;
+    background-color: var(--coloFondo);
 }
 
 header{
+    width: 100%;
+    height: 92px;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 10px;
+    padding: 10px;
     
+}
+
+header input{
+    margin-right: 100px;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
 }
 
 main{
     background-image: url('./images/libreriaAntiguas.jpg');
     background-size: cover;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    place-items: center; 
+    justify-content: center;
+    
+    
 }
 
 main section{
     color: white;
 }
 
-button{
-    width: 45px;
-    height: 20px;
-}
 
 #search{
     display: flex;
@@ -45,11 +68,7 @@ button{
     height: 10px;
 } */
 
-#btn-busqueda{
-    width: 10px;
-    height: 15px;
-    margin-left: 0px;
-}
+
 
 main{
     width: 100%;
@@ -57,6 +76,7 @@ main{
 }
 
 .botonesHead{
+    /* display: none; */
     width: 111px;
     height: 50px;
     left: 28px;
@@ -64,4 +84,28 @@ main{
     background: #F6F5F1;
     border-radius: 12px;
     color: #16A596;
+}
+
+.btn-home{
+    width: 325px;
+    height: 57px;
+    top: 501px;
+    border-radius: 12px;
+    background-color:var(--coloFondo);
+    color: white;
+}
+
+.barraBusqueda{
+    width: 325px;   
+    height: 48px;
+    border-radius: 12px;
+    top: 586px;
+    background: #FFFFFF;
+   
+}
+
+
+.busqueda{
+    display: flex;
+    gap: 10px;
 }
