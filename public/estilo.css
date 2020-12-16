@@ -92,3 +92,25 @@ main {
     border: 5px solid var(--coloFondo);
     border-radius: 47%;
 }
+
+.tarjeta_libro {
+    grid-area: tarjeta_libro;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 200px;
+}
+
+.tarjeta_libro section{
+    width: 700px;
+    height: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 black;
+}
+
+.datos_lista {
+    position: relative;
+    left: 300px;
+    bottom: 200px;
+    list-style: none;
+}
