@@ -1,5 +1,30 @@
 //Prueba carga libros.
-const librodata = require('./libros.json');
+let librosdataJson =require('./libros.json');
+// let librosdata = JSON.parse(librosdataJson);
+// parse(): Acepta una cadena JSON como parámetro, y devuelve el objeto JavaScript correspondiente.
+// stringify(): Acepta un objeto como parámetro, y devuelve la forma de cadena JSON equivalente.
+let listaLibroArrayParse = JSON.parse(librosdataJson);
+
+console.log(listaLibroArrayParse);
+console.log(listaLibroArrayParse[0].titulo);
+
+let listaLibroArray = [];
+
+librosdataJson.forEach(x => {
+    listaLibroArray.push(x);
+});
+
+console.log(listaLibroArray);
+
+// for (libro of librosdataJson) {
+//     listaLibroArray.push(libro.titulo);
+// }
+
+// librosdataJson.forEach(x => {listaLibroArray.push(x.autor);});
+
+// console.log(listaLibroArray);
+
+
 
 //cargar el express
 const express = require("express");
@@ -33,7 +58,7 @@ app.engine("hbs", exphbs({
 
 //indica el lugar donde coge los "parciales"
 app.get("/", function(req, res){
-    res.render("index", {layout:"listaLibros", listaLibros: librodata, listExists: true});
+    res.render("index", {layout:"listaLibros", listaLibroArray, listExists: true});
 });
 
 app.use(express.static("public"));
