@@ -90,6 +90,15 @@ main {
     border-radius: 47%;
 }
 
+.foto_libro {
+    width: 300px;
+    height: 250px;
+    border-radius: 20%;
+    border: 5px solid var(--coloFondo);
+    display: flex;
+    justify-content: center;
+}
+
 .tarjeta_libro {
     display: flex;
     justify-content: center;
@@ -98,7 +107,7 @@ main {
 }
 
 .tarjeta_libro section {
-    /* display: flex; */
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 700px;
@@ -112,12 +121,15 @@ main {
 }
 
 .tarjeta_libro_detalle {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     width: 700px;
-    height: 300px;
+    /* height: 300px; */
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 var(--coloFondo), 0 6px 20px 0 black;
+
 }
 
 
@@ -127,3 +139,4 @@ main {
     bottom: 200px;
     list-style: none;
 } */
+
