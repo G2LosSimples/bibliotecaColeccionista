@@ -1,3 +1,6 @@
+//Prueba carga libros.
+const librodata = require('./libros.json');
+
 //cargar el express
 const express = require("express");
 
@@ -25,29 +28,12 @@ app.engine("hbs", exphbs({
 }));
 
 
-fakeApi = () => {
-    return [
-        {
-            titulo: "El Quijote",
-            fecha: 2077
-        },
 
-        {
-            titulo: "Harry Potter y la Piedra Filosofal",
-            fecha: 1999
-        },
-
-        {
-            titulo: "Los Pilares de la Tierra",
-            fecha: 852
-        }
-    ];
-};
 
 
 //indica el lugar donde coge los "parciales"
 app.get("/", function(req, res){
-    res.render("index", {layout:"listaLibros", listaLibros: fakeApi(),listExists: true});
+    res.render("index", {layout:"listaLibros", listaLibros: librodata, listExists: true});
 });
 
 app.use(express.static("public"));

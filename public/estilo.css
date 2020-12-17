@@ -10,6 +10,7 @@
     box-sizing: border-box;
     font-family: Roboto;
     font-size: 20px;
+    list-style: none;
 }
 
 header,
@@ -32,10 +33,7 @@ header {
     background-image: url('./images/libreriaAntiguas.jpg');
     background-size: cover;
 
-
 }
-
-
 
 #search {
     display: flex;
@@ -48,12 +46,9 @@ main {
     
     width: 100%;
     height: 620px;
-    gap: 10px;
     padding-top: 200px;
     display: flex;
-    gap: 30px;
-    
-    place-items: center;
+    gap: 30px;    
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -98,16 +93,15 @@ main {
     border-radius: 47%;
 }
 
-  .tarjeta_libro {
- 
+.tarjeta_libro { 
     display: flex;
     justify-content: center;
     align-items: center;
-   
+    flex-wrap: wrap;
 }  
 
 .tarjeta_libro section{
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     width: 700px;
@@ -115,14 +109,19 @@ main {
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 black;
     
+    
 }
 
-.datos_lista {
+.datos-libro{
+    box-shadow: none;
+}
+
+/* .datos_lista {
     position: relative;
     left: 300px;
     bottom: 200px;
     list-style: none;
-}
+} */
 
 
 

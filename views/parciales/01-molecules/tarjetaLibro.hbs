@@ -1,28 +1,11 @@
-<div class="tarjeta_libro">
-    
-        {{> 00-atoms/foto claseFoto = "foto_libro" altFoto="Foto libro" direcFoto= "images/libro.jpg"}}
-
-        {{> 00-atoms/caracteristicasLibro titulo="El Quijote" autor="Cervantes Jr"}}    
-    
-
-</div> 
 
 
 <div class="tarjeta_libro">
-   
+    <section>
         {{> 00-atoms/foto claseFoto = "foto_libro" altFoto="Foto libro" direcFoto= "images/libro.jpg"}}
-
-        {{> 00-atoms/caracteristicasLibro titulo="El Quijote" autor="Cervantes Jr"}}    
-    
-
-</div> 
-
-
-<div class="tarjeta_libro">
-    
-        {{> 00-atoms/foto claseFoto = "foto_libro" altFoto="Foto libro" direcFoto= "images/libro.jpg"}}
-
-        {{> 00-atoms/caracteristicasLibro titulo="El Quijote" autor="Cervantes Jr"}}    
-    
+        
+        {{> 00-atoms/caracteristicasLibro titulo= listaLibros[0].titulo autor="Cervantes Jr"}}    
+        
+    </section>
 
 </div> 

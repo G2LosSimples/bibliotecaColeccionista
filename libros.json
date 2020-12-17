@@ -1,6 +1,5 @@
 [
     {
-       
         "titulo": "El Quijote",
         "autor": "Cervantes",
         "año": 2077,
@@ -9,22 +8,18 @@
         "precio": 1200,
         "descripcion": "Da igual esto es u ntexto aletario , estaba yo en el bar tomando algo y me escribi esto",
         "imagen": ""
-    
     },
-
     {
-       
         "titulo": "Fray Perico y su burrico",
         "autor": "JM Martin",
         "año": 1980,
         "propietario": "Silvia",
         "estado": "Regular",
-        "precio":100,
+        "precio": 100,
         "descripcion": "Da igual esto es u ntexto aletario , estaba yo en el bar tomando algo y me escribi esto",
         "imagen": ""
     },
     {
-       
         "titulo": "Death Tomo 1",
         "autor": "Tsugumi Ohba",
         "año": 2006,
@@ -34,8 +29,5 @@
         "descripcion": "El mejor libro de la libreria",
         "imagen": ""
     }
-
-
 ]
-
 
