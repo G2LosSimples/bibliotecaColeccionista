@@ -1,20 +1,34 @@
+const libroSchema = require('./models/libro');
+
+const libro1 = new libroSchema({
+    titulo: "El quijote",
+    autor: "Cervantes",
+    anio: 1325,
+    precio: 2000,
+    propietario: "Jairo",
+    estado: "regular",
+    descripción: "asdhldldjdfhskdhgaiughaskfh"
+})
+
+console.log(libro1)
+
 //Prueba carga libros.
-let librosdataJson =require('./libros.json');
+let librosdataJson = require('./libros.json');
 // let librosdata = JSON.parse(librosdataJson);
 // parse(): Acepta una cadena JSON como parámetro, y devuelve el objeto JavaScript correspondiente.
 // stringify(): Acepta un objeto como parámetro, y devuelve la forma de cadena JSON equivalente.
-let listaLibroArrayParse = JSON.parse(librosdataJson);
+// let listaLibroArrayParse = JSON.parse(librosdataJson);
 
-console.log(listaLibroArrayParse);
-console.log(listaLibroArrayParse[0].titulo);
+// console.log(listaLibroArrayParse);
+// console.log(listaLibroArrayParse[0].titulo);
 
 let listaLibroArray = [];
 
-librosdataJson.forEach(x => {
-    listaLibroArray.push(x);
-});
+// librosdataJson.forEach(x => {
+//     listaLibroArray.push(x);
+// });
 
-console.log(listaLibroArray);
+// console.log(listaLibroArray);
 
 // for (libro of librosdataJson) {
 //     listaLibroArray.push(libro.titulo);
@@ -47,9 +61,9 @@ app.set("view engine", "hbs");
 
 //configuración del motor
 app.engine("hbs", exphbs({
-    layoutsDir:__dirname+"/views/layouts",
-    partialsDir:__dirname+"/views/parciales",
-    extname:"hbs"
+    layoutsDir: __dirname + "/views/layouts",
+    partialsDir: __dirname + "/views/parciales",
+    extname: "hbs"
 }));
 
 
@@ -57,17 +71,8 @@ app.engine("hbs", exphbs({
 
 
 //indica el lugar donde coge los "parciales"
-app.get("/", function(req, res){
-    res.render("index", {layout:"listaLibros", listaLibroArray, listExists: true});
+app.get("/", function(req, res) {
+    res.render("index", { layout: "libroDetalle", listaLibroArray, listExists: true });
 });
 
 app.use(express.static("public"));
-
-
-
-
-
-
-
-
-
