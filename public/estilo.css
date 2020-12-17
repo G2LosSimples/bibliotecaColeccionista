@@ -27,19 +27,15 @@ header {
     padding: 10px;
 }
 
-main {
+
+.home-foto {
     background-image: url('./images/libreriaAntiguas.jpg');
     background-size: cover;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    place-items: center;
-    justify-content: center;
+
+
 }
 
-main section {
-    color: white;
-}
+
 
 #search {
     display: flex;
@@ -49,8 +45,17 @@ main section {
 }
 
 main {
+    
     width: 100%;
     height: 620px;
+    gap: 10px;
+    padding-top: 200px;
+    display: flex;
+    gap: 30px;
+    
+    place-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .botonesHead {
@@ -93,19 +98,23 @@ main {
     border-radius: 47%;
 }
 
-.tarjeta_libro {
-    grid-area: tarjeta_libro;
+  .tarjeta_libro {
+ 
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 200px;
-}
+   
+}  
 
 .tarjeta_libro section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 700px;
     height: 300px;
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 black;
+    
 }
 
 .datos_lista {
@@ -114,3 +123,6 @@ main {
     bottom: 200px;
     list-style: none;
 }
+
+
+
