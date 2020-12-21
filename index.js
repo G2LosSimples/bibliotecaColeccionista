@@ -72,7 +72,7 @@ app.engine("hbs", exphbs({
 
 //indica el lugar donde coge los "parciales"
 app.get("/", function(req, res) {
-    res.render("index", { layout: "usuarioLibro", listaLibroArray, listExists: true });
+    res.render("index", { layout: "libroNuevo", listaLibroArray, listExists: true });
 });
 
 app.use(express.static("public"));

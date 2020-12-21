@@ -48,6 +48,7 @@ main {
     gap: 30px;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .botonesHead {
@@ -83,9 +84,9 @@ main {
     gap: 10px;
 }
 
-.foto_usu {
+.foto_usuario {
     width: 155px;
-    height: 123px;
+    height: 155px;
     border: 5px solid var(--coloFondo);
     border-radius: 47%;
 }
@@ -113,7 +114,7 @@ main {
     width: 700px;
     height: 300px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px 0 gray, 0 6px 20px 0 black;
+    box-shadow: 0 4px 8px 0 var(--coloFondo), 0 6px 20px 0 black;
 }
 
 .datos-libro {
@@ -131,6 +132,25 @@ main {
     box-shadow: 0 4px 8px 0 var(--coloFondo), 0 6px 20px 0 black;
 
 }
+
+.claseFormulario {
+    background-color: var(--coloFondo);
+    border: 1px solid grey;
+    border-radius: 10px;
+    padding: 30px;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.input, .textArea {
+    border: 1px solid grey;
+    border-radius: 10px;
+}
+
+
 
 
 /* .datos_lista {
