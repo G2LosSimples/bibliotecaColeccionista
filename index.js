@@ -75,8 +75,13 @@ app.get("/", function(req, res) {
     res.render("index", { layout: "main", listaLibroArray, listExists: true });
 });
 
+<<<<<<< Updated upstream
 app.get("/libronuevo", function(req, res) {
     res.render("index", { layout: "libroNuevo", listaLibroArray, listExists: true });
+=======
+app.get("/libroDetalle", function(req, res) {
+    res.render("index", { layout: "libroDetalle", listaLibroArray, listExists: true });
+>>>>>>> Stashed changes
 });
 
 app.use(express.static("public"));
