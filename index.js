@@ -75,13 +75,25 @@ app.get("/", function(req, res) {
     res.render("index", { layout: "main", listaLibroArray, listExists: true });
 });
 
-<<<<<<< Updated upstream
-app.get("/libronuevo", function(req, res) {
-    res.render("index", { layout: "libroNuevo", listaLibroArray, listExists: true });
-=======
 app.get("/libroDetalle", function(req, res) {
     res.render("index", { layout: "libroDetalle", listaLibroArray, listExists: true });
->>>>>>> Stashed changes
 });
+
+app.get("/libroNuevo", function(req, res) {
+    res.render("index", { layout: "libroNuevo", listaLibroArray, listExists: true });
+});
+
+app.get("/listaLibros", function(req, res) {
+    res.render("index", { layout: "listaLibros", listaLibroArray, listExists: true });
+});
+
+app.get("/usuarioLibro", function(req, res) {
+    res.render("index", { layout: "usuarioLibro", listaLibroArray, listExists: true });
+});
+
+
+
+
+
 
 app.use(express.static("public"));
