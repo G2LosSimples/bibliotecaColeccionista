@@ -8,7 +8,7 @@ const libro1 = new libroSchema({
     propietario: "Jairo",
     estado: "regular",
     descripción: "asdhldldjdfhskdhgaiughaskfh"
-})
+});
 
 console.log(libro1)
 
@@ -72,6 +72,10 @@ app.engine("hbs", exphbs({
 
 //indica el lugar donde coge los "parciales"
 app.get("/", function(req, res) {
+    res.render("index", { layout: "main", listaLibroArray, listExists: true });
+});
+
+app.get("/libronuevo", function(req, res) {
     res.render("index", { layout: "libroNuevo", listaLibroArray, listExists: true });
 });
 
