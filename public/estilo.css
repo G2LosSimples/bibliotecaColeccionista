@@ -132,9 +132,11 @@ main {
     justify-content: center;
     align-items: center;
     width: 700px;
-    /* height: 300px; */
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 var(--coloFondo), 0 6px 20px 0 black;
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 0px; 
 }
 
 .claseFormulario {
@@ -173,4 +175,9 @@ main {
     display: flex;
     flex-direction: column;
     gap: 8px;
+}
+
+.organismoUsuarioLibro{
+    display: flex;
+    flex-direction: column;
 }
