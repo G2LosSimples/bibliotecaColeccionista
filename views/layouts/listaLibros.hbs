@@ -9,11 +9,14 @@
 <body>
     
     
-    {{> 01-molecules/partialHeader}}
+    {{> 01-molecules/partialHeader linkboton="/" nombreBoton="Home"}}
     <main>
-        <a href="/usuarioLibro">
-        {{> 01-molecules/tarjetaLibro listaLibros= "tarjeta_libro"}}
-        </a>
+        
+        {{> 01-molecules/tarjetaLibro direcFoto= "images/libro.jpg" listaLibros= "tarjeta_libro"}}
+        
+        {{> 01-molecules/tarjetaLibro direcFoto= "images/librofondo.jpg" listaLibros= "tarjeta_libro"}}
+        {{> 01-molecules/tarjetaLibro direcFoto= "images/librofondo.jpg" listaLibros= "tarjeta_libro"}}
+        {{> 01-molecules/tarjetaLibro direcFoto= "images/librofondo.jpg" listaLibros= "tarjeta_libro"}}
     </main>
 
     

@@ -31,6 +31,8 @@ header {
 .home-foto {
     background-image: url('./images/libreriaAntiguas.jpg');
     background-size: cover;
+    display: flex;
+    flex-direction: column;
 }
 
 #search {
@@ -43,7 +45,7 @@ header {
 main {
     width: 100%;
     height: 620px;
-    padding-top: 200px;
+    padding-top: 100px;
     display: flex;
     gap: 30px;
     justify-content: center;
@@ -95,7 +97,7 @@ main {
     gap: 10px;
 }
 
-.foto_usuario {
+.foto_usu {
     width: 155px;
     height: 155px;
     border: 5px solid var(--coloFondo);
@@ -103,24 +105,16 @@ main {
 }
 
 .foto_libro {
-    width: 300px;
-    height: 250px;
+    width: 230px;
+    height: auto;
     border-radius: 20%;
-    border: 5px solid var(--coloFondo);
     display: flex;
     justify-content: center;
 }
 
 .tarjeta_libro {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.tarjeta_libro section {
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     width: 700px;
     height: 300px;
@@ -141,7 +135,6 @@ main {
     /* height: 300px; */
     border-radius: 10px;
     box-shadow: 0 4px 8px 0 var(--coloFondo), 0 6px 20px 0 black;
-
 }
 
 .claseFormulario {
@@ -157,12 +150,12 @@ main {
     gap: 30px;
 }
 
-.input, .textArea {
+.input,
+.textArea {
     border: 1px solid grey;
     border-radius: 10px;
-    padding:10px;
+    padding: 10px;
     width: 80%;
-
 }
 
 .botonFormulario {
@@ -176,11 +169,8 @@ main {
     font-size: 20px;
 }
 
-
-/* .datos_lista {
-    position: relative;
-    left: 300px;
-    bottom: 200px;
-    list-style: none;
-} */
-
+.datos_lista {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}

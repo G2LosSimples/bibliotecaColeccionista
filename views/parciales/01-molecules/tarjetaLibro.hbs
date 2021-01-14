@@ -1,11 +1,11 @@
 
 
-<div class= {{listaLibros}}>
-    <section>
-        {{> 00-atoms/foto claseFoto = "foto_libro" altFoto="Foto libro" direcFoto= "images/libro.jpg"}}
+
+    <section class= {{listaLibros}}>
+       <a href="/libroDetalle"> {{> 00-atoms/foto claseFoto = "foto_libro" altFoto="Foto libro" }}</a>
         
         {{> 00-atoms/caracteristicasLibro titulo= "titulo" autor= "autor" anio= "anio" precio= "precio" estado= "estado" descripcion= "descripcion"}}     
         
     </section>
 
-</div> 
+
