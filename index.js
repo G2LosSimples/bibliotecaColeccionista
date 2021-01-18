@@ -1,44 +1,4 @@
-const libroSchema = require('./models/libro');
-
-const libro1 = new libroSchema({
-    titulo: "El quijote",
-    autor: "Cervantes",
-    anio: 1325,
-    precio: 2000,
-    propietario: "Jairo",
-    estado: "regular",
-    descripción: "asdhldldjdfhskdhgaiughaskfh"
-});
-
-console.log(libro1)
-
-//Prueba carga libros.
-let librosdataJson = require('./libros.json');
-// let librosdata = JSON.parse(librosdataJson);
-// parse(): Acepta una cadena JSON como parámetro, y devuelve el objeto JavaScript correspondiente.
-// stringify(): Acepta un objeto como parámetro, y devuelve la forma de cadena JSON equivalente.
-// let listaLibroArrayParse = JSON.parse(librosdataJson);
-
-// console.log(listaLibroArrayParse);
-// console.log(listaLibroArrayParse[0].titulo);
-
-let listaLibroArray = [];
-
-// librosdataJson.forEach(x => {
-//     listaLibroArray.push(x);
-// });
-
-// console.log(listaLibroArray);
-
-// for (libro of librosdataJson) {
-//     listaLibroArray.push(libro.titulo);
-// }
-
-// librosdataJson.forEach(x => {listaLibroArray.push(x.autor);});
-
-// console.log(listaLibroArray);
-
-
+require ("./database");
 
 //cargar el express
 const express = require("express");
@@ -46,10 +6,13 @@ const express = require("express");
 //cargar el modulo handlebars
 const exphbs = require("express-handlebars");
 
+//carga módulo Morgan
+const morgan = require ("morgan");
+
 //crea un servidor utilizando express
 const app = express();
 
-//elige el puerto en el que se montara el servidor
+//elige el puerto en el que se montará el servidor
 const port = 3000;
 
 //escucha el puerto
@@ -65,10 +28,6 @@ app.engine("hbs", exphbs({
     partialsDir: __dirname + "/views/parciales",
     extname: "hbs"
 }));
-
-
-
-
 
 //indica el lugar donde coge los "parciales"
 app.get("/", function(req, res) {
@@ -91,9 +50,6 @@ app.get("/usuarioLibro", function(req, res) {
     res.render("index", { layout: "usuarioLibro", listaLibroArray, listExists: true });
 });
 
-
-
-
-
+app.use(morgan("dev"));
 
 app.use(express.static("public"));
