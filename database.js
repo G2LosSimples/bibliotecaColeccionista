@@ -8,5 +8,7 @@ mongoose.connect(mongoDB, {
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false
-}).then (db => console.log("Los Simples se han conectado.")).catch (error => console.log(error));
+})
+.then (db => console.log("Los Simples se han conectado."))
+.catch (error => console.log(error));
 
