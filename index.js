@@ -30,26 +30,31 @@ app.engine("hbs", exphbs({
 }));
 
 //indica el lugar donde coge los "parciales"
-app.get("/", function(req, res) {
-    res.render("index", { layout: "main", listaLibroArray, listExists: true });
-});
+// app.get("/", function(req, res) {
+//     res.render("index", { layout: "main", listaLibroArray, listExists: true });
+// });
 
-app.get("/libroDetalle", function(req, res) {
-    res.render("index", { layout: "libroDetalle", listaLibroArray, listExists: true });
-});
+// app.get("/libroDetalle", function(req, res) {
+//     res.render("index", { layout: "libroDetalle", listaLibroArray, listExists: true });
+// });
 
-app.get("/libroNuevo", function(req, res) {
-    res.render("index", { layout: "libroNuevo", listaLibroArray, listExists: true });
-});
+// app.get("/libroNuevo", function(req, res) {
+//     res.render("index", { layout: "libroNuevo", listaLibroArray, listExists: true });
+// });
 
-app.get("/listaLibros", function(req, res) {
-    res.render("index", { layout: "listaLibros", listaLibroArray, listExists: true });
-});
+// app.get("/listaLibros", function(req, res) {
+//     res.render("index", { layout: "listaLibros", listaLibroArray, listExists: true });
+// });
 
-app.get("/usuarioLibro", function(req, res) {
-    res.render("index", { layout: "usuarioLibro", listaLibroArray, listExists: true });
-});
+// app.get("/usuarioLibro", function(req, res) {
+//     res.render("index", { layout: "usuarioLibro", listaLibroArray, listExists: true });
+// });
 
 app.use(morgan("dev"));
 
 app.use(express.static("public"));
+
+app.use(express.json());
+app.use(express.urlencoded({extended:false}));
+
+app.use(require("./routes/routes"));
