@@ -9,13 +9,13 @@ bookController.renderInicio = (req, res) => {
     res.render("index", {layout: "main"});
 };
 
-bookController.listarLibros = async(req, res) =>{
+bookController.listarLibros = (req, res) =>{
     let listLibros = buscarTodosLibros();
     console.log(`Soy el Controlador:${listLibros}`);
     res.render("index", {layout:"listaLibros", listLibros, listExists: true});
 };
 
-bookController.libroDetalle = async(req,res) =>{
+bookController.libroDetalle = (req,res) =>{
     res.render("index", {layout:"libroDetalle.hbs", libro});
 };
 

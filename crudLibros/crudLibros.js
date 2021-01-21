@@ -25,7 +25,7 @@ async function crearLibro (titulo, autor, anio, precio, propietario, estado, des
 //READ-FIND
 async function buscarTodosLibros (){
     const listTodosLibros = await libro.find();
-    console.log(`Esto es el Findall:${listTodosLibros}`);
+    console.log(`Soy el CRUD: ${listTodosLibros}`);
     return listTodosLibros
 };
 
