@@ -23,6 +23,11 @@ async function crearLibro (titulo, autor, anio, precio, propietario, estado, des
 //crearLibro ("xxx", "zzz", 2001, 8.99, "rrr", "hhh", "jjjjjj");
 
 //READ-FIND
+async function buscarTodosLibros (){
+    const listTodosLibros = await libro.find();
+    console.log(`Esto es el Findall:${listTodosLibros}`);
+    return listTodosLibros
+};
 
 async function buscarTitulo (titulo) {
     let resultadoBusqueda = await libro.find({
@@ -34,6 +39,11 @@ async function buscarTitulo (titulo) {
     console.log (resultadoBusqueda);
     return resultadoBusqueda;
 }; 
+
+async function buscarId (id){
+    const resultado = await libro.findById(id);
+    return resultado;
+};
 
 //buscarTitulo ("La chica del tren");
 
@@ -50,6 +60,7 @@ async function borrarLibro (id) {
      let libroActualizado = await libro.findOneAndUpdate ({titulo:titulo}, {estado:nuevoEstado}, {new:true});
      console.log (libroActualizado + " ha sido actualizado.")
  };
- actualizarLibro ("La chica del tren", "Está mordido.");
+//  actualizarLibro ("La chica del tren", "Está mordido.");
 
 
+module.exports = {buscarTodosLibros, buscarId};

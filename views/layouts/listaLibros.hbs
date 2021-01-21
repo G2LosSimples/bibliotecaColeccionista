@@ -1,24 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
     <title>Lista Libros</title>
 </head>
-<body>
-    
-    
+
+<body>  
+
+
     {{> 01-molecules/partialHeader linkboton="/" nombreBoton="Home"}}
     <main>
-        
-        {{> 01-molecules/tarjetaLibro direcFoto= "images/libro.jpg" listaLibros= "tarjeta_libro"}}
-        
+
+        {{> 01-molecules/tarjetaLibro direcFoto= "images/libro.jpg " listaLibros= "tarjeta_libro"}} --}}
         {{> 01-molecules/tarjetaLibro direcFoto= "images/librofondo.jpg" listaLibros= "tarjeta_libro"}}
         {{> 01-molecules/tarjetaLibro direcFoto= "images/librofondo.jpg" listaLibros= "tarjeta_libro"}}
         {{> 01-molecules/tarjetaLibro direcFoto= "images/librofondo.jpg" listaLibros= "tarjeta_libro"}}
     </main>
 
-    
+
 </body>
+
 </html>
